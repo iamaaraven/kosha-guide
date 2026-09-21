@@ -15,23 +15,25 @@ Enter your name and birth details to receive a layered reading across Western & 
 ## Features
 
 1. **Western astrology** — sun sign, element, ruling planet vibe, short blurb  
-2. **Chinese astrology** — animal + element (CNY-aware year), traits, compatibility hint  
+2. **Chinese astrology** — animal + element (year pivot ~Feb 4), traits, compatibility hint  
 3. **Numerology** — Life Path, Destiny/Expression, Soul Urge, Personality  
 4. **Gematria** — English ordinal sum + reduced digit + interpretive note  
 5. **Lucky profile** — numbers, colors, lucky day  
 6. **Brand & style vibes** — clothing / auto / tech energy matches (examples only)  
 7. **Today's nudge** — weekday + life path guidance line  
 8. **localStorage** — last reading restored in-browser  
-9. **Offline-friendly** — single self-contained HTML (no huge React bundle)
+9. **Offline-friendly** — small vanilla JS files (no React / Vite bundle on gh-pages)
 
 ## Deploy (lite)
 
-Primary ship is under `pages-lite/`:
+Primary ship is under `pages-lite/` (also mirrored at `gh-pages` branch root):
 
-- `index.html` — app + all calculation logic (vanilla JS)
+- `index.html` — UI shell
+- `data.js` — tables (signs, numerology meanings, vibes, nudges)
+- `app.js` — calculation + render logic
 - `manifest.webmanifest` / `icon.svg` / `.nojekyll`
 
-Branch **`gh-pages`** mirrors these files at the branch root for GitHub Pages / CDN.
+Total under ~30KB — safe for GitHub Contents API / MCP uploads.
 
 ## Author
 
